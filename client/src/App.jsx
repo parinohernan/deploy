@@ -7,7 +7,7 @@ import store from "./redux/store.js";
 import About from "./views/About/About";
 import Error from "./views/Error/Error";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://deploy-production-423d.up.railway.app/";
 
 function App() {
   const location = useLocation();
