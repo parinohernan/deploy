@@ -29,7 +29,7 @@ export const getCountries = () => {
     
     return async (dispatch) => {
         try {
-            let countries = await axios.get("http://localhost:3001/countries");
+            let countries = await axios.get("/countries");
             return dispatch({type: GET_COUNTRIES, payload: countries.data } );
         } catch (error) {
             return dispatch({ type: 'FETCH_ERROR', payload: error.message });
@@ -41,8 +41,8 @@ export const getCountryDetail = (id) => {
     
     return async (dispatch) => {
         try {
-            let country = await axios.get(("http://localhost:3001/countries/"+id));
-            console.log("http://localhost:3001/countries/",id);
+            let country = await axios.get(("/countries/"+id));
+            console.log("/countries/",id);
             return dispatch({type: GET_COUNTRY_DETAIL, payload: country.data } );
         } catch (error) {
             //console.log("error action ",error.message);
@@ -57,7 +57,7 @@ export const postActivity = (payload) => {
     // console.log("paises", payload.paises);
     return async () => {
       try {
-        let activity = await axios.post("http://localhost:3001/activities", payload);
+        let activity = await axios.post("/activities", payload);
         return activity.data; 
       } catch (error) {
         console.log("error action ", error.message);
@@ -70,7 +70,7 @@ export const filterPaisByName = (nombre) => {
     //return { type: FILTER_BY_NAME, payload: nombre };
     return async (dispatch) => {
     try {
-        const url = ("http://localhost:3001/countries/?name=" + nombre);
+        const url = ("/countries/?name=" + nombre);
         let countries = await axios.get(url);
         return dispatch({type: FILTER_BY_NAME, payload: countries.data } );
     } catch (error) {
