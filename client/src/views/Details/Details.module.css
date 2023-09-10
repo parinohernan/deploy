@@ -1,0 +1,46 @@
+
+.divCountryDetails {
+    color: rgb(66, 66, 66);
+    font-size: x-large;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;  
+}
+
+.divDetailConuntry {
+    color: rgb(66, 66, 66);
+    font-size: large;
+    max-width: 49%;
+    /* border: solid red 2px; */
+}
+
+.divDetailActivity {
+    
+    border: solid gray 2px; 
+    border: 1px;
+    padding-bottom: 2em;
+    color: rgb(66, 66, 66);
+    font-size: x-large;
+    max-width: 49%;
+    
+}
+.divActividades {
+    border-radius: 10px;
+    background-color: beige;
+    margin: 1em;
+    font-family: cursive;
+    font-size: large;
+    /* border-bottom: 1px solid gray;
+    padding-bottom: 5px; */
+}
+
+.divUnaActividad {
+    margin-bottom: 1em;
+    /* border-bottom: 1px solid gray; */
+    padding-bottom: 5px;
+}
+.divNingunaActividad {
+    margin: 2em;
+    /* border-bottom: 1px solid gray; */
+    padding-bottom: 5px;
+}

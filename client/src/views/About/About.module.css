@@ -1,0 +1,49 @@
+
+.link {
+  color: #4498C6;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.aboutMeContainer{
+  font-family: cursive;
+  color: black;
+  background-color: yellow;
+}
+
+.contenedor {
+    width: 98%; /* Ancho del div contenedor */
+    height: 200px; /* Alto del div contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    position: relative; /* Permite posicionar elementos secundarios relativos a este contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .contenedor::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* Ancho igual al del contenedor */
+    height: 350%; /* Doble de la altura del contenedor para repetir la imagen */
+    border-radius: 20px;
+    background-image: url('../../../public/images/fondo-app.jpg') ; /* URL de tu imagen de fondo */
+    background-repeat: repeat-y; /* Repite la imagen verticalmente */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el div */
+    animation: scroll 60s linear infinite; /* Aplica una animación llamada 'scroll' */
+    z-index: -1; /* Coloca la imagen de fondo detrás del contenido */
+  }
+  
+  @keyframes scroll {
+    50% {
+      transform: translateY(-80%); /* Comienza en la posición original (sin desplazamiento horizontal) */
+    }
+    50% {
+      transform: translateY(-30%); /* Termina desplazándose hacia arriva (puedes ajustar el valor según la velocidad deseada) */
+    }
+  }
+  
+ 

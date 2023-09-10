@@ -1,0 +1,12 @@
+/* NumberInput.module.css */
+.selected {
+    background-color: #1976d2; /* Cambia el color de fondo del botón seleccionado */
+    /* color: white; Cambia el color del texto del botón seleccionado */
+    font-weight: bold; /* Puedes aumentar el peso de la fuente para resaltar */
+    border: none; /* Puedes eliminar el borde del botón seleccionado */
+  }
+
+.botones{
+  margin: 15px;
+}
+  

@@ -1,0 +1,61 @@
+/* Agrega estos estilos en tu archivo styles.css o equivalente */
+a {    
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.card {
+    width: 16% ;
+    min-width: 110px;
+    color: rgb(66, 66, 66);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin: 10px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card h2{
+    
+    font-size: large;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .flag {
+    /* width: 120px; */
+    max-width: 120px;
+    max-height: 70px;
+    /* width: auto;
+    height: auto; */
+    object-fit:fill;
+
+    height:110px; /* Ajusta según tus necesidades */
+  }
+  
+  .textCard {
+    padding: 10px;
+  }
+  
+  .h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 14px;
+    margin: 0;
+  }
+  

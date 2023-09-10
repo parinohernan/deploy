@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: cursive;
+}
+
+.promo {
+    /* background-color: #3f3f3f83; */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: #000000;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.promo h3{
+    text-shadow: yellow;
+    font-size: 3.5rem;
+    text-align: center;
+    color: yellow;
+    font-weight: 700;
+}
+
+.promo p{
+    
+    font-size: 2.5rem;
+    text-align: center;
+    color: yellow;
+    font-weight: 900;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+    width: 300px;
+    background-color: yellow;
+    font-size: 1.8rem;
+    color: #3f3f3f;
+    font-weight: 800;
+    transition: 150ms;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    transform: translate(0, -5px);
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*de esta forma ocupa en ancho y el alto completo del control padre y er responsive*/
+}
+
+.capa { /*colocamos la capa sobre el control padre*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    mix-blend-mode: overlay;/*oscurece o aclara la capa dependiendo del color del fondo (del video en este caso)*/
+}
+

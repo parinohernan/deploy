@@ -1,0 +1,16 @@
+.divActividades {
+    border-radius: 10px;
+    background-color: beige;
+    margin: 1em;
+    
+    /* border-bottom: 1px solid gray;
+    padding-bottom: 5px; */
+}
+.h2{
+    font-size: 1.5em;
+}
+.divUnaActividad {
+    margin-bottom: 1em;
+    /* border-bottom: 1px solid gray; */
+    padding-bottom: 5px;
+}

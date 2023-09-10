@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+  display: inline;
+}
+
+.accordion-item {
+  color: #666;
+  margin: 10px 0;
+  font-family: cursive;
+  }
+  
+.accordion-title {
+background-color: yellow;
+color: black;
+padding: 10px;
+cursor: pointer;
+font-weight: bold;
+margin: 20px;
+}
+
+.accordion-title.active {
+background-color: yellow; 
+}
+
+.accordion-content {
+background-color: white;
+color: black;
+padding: 10px;
+border-radius: 10px;
+border: 1px solid #ddd;
+margin-left: 25px;
+margin-right: 25px;
+}
+
+
+p {
+  line-height: 1.5; /* Interlineado de 1.5 veces el tamaño del texto */
+  text-indent: 20px; /* Sangría de 20px en el margen izquierdo */
+}
+
+  

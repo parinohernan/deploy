@@ -1,0 +1,41 @@
+.cards{
+    display: flex;
+    flex-wrap:wrap;
+}
+/* .container{
+    /* border: 1px solid lightskyblue; /
+    min-width: 80vw;
+    min-height: 60vw;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 20px; */
+
+.controles{
+    /* border: 1px solid lightskyblue; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 20px;
+    font-family: "Wendy One", sans-serif; 
+    text-decoration: none;
+    background-color: beige;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+}
+button{
+    background-color: yellow;
+    border-radius: 20px;
+    border: solid 1px
+}
+button:hover{
+    
+    border: solid 6px
+}

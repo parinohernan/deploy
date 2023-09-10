@@ -1,0 +1,20 @@
+
+* {
+  font-family: cursive;
+}
+
+a {
+  
+  display: none;
+}
+
+
+ #root {
+
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+
+  text-align: center;
+  background-color: black;
+}

@@ -1,0 +1,10 @@
+.divDetails {
+    margin: 1em;
+    font-family: cursive;
+    padding-bottom: 2em;
+}
+.divTexto{
+    border-radius: 10px;
+    background-color: beige;
+    padding: 10px;
+}

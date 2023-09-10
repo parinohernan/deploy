@@ -1,0 +1,9 @@
+.homeContainer {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+}
+.homeFyO {
+    min-width: 250px;
+     max-width: 20%;
+}

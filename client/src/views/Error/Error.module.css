@@ -1,0 +1,12 @@
+.divError {
+    
+    padding: 2em;
+    width: 100%;
+    border:solid;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* justify-items: center; */
+    font-size: xx-large;
+    color:red
+}

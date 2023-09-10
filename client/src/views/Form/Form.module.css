@@ -1,0 +1,83 @@
+
+
+.subTitle {
+    margin-top: 20px;
+    color: black;
+    align-items: center;
+}
+
+.divForm{
+    width: 100%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divBotones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.botonEnviar{
+    
+    color: black;
+}
+.botonLimpiarDatos{
+    color: black;
+}
+
+.divActividadConteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: rows; /* Cambiado a dirección de columna */
+    align-items:flex-start;
+    justify-content: space-around;
+  }
+
+  .error {
+    background-color: black;
+    color: red;
+  }
+  
+  .duracionInput {
+    
+    margin: 10px;
+  }
+
+  .temporadaInput {
+    
+    margin: 10px;
+  }
+
+  .divImput,
+  .divPaises {
+    background-color: beige;
+    margin: 2em;
+    border-radius: 10px;
+    width: 30%;
+    font-family: "Wendy One", sans-serif;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column; /* Cambiado a dirección de columna */
+    flex: 1; /* Esto permite que ocupen el espacio vertical disponible */
+  }
+  
+  .divPaises {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .divPaisesSelect {
+    background-color: beige;
+    margin: 2em;
+    border-radius: 10px;
+    width: 30%;
+    font-family: "Wendy One", sans-serif;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    flex-direction: row;
+    justify-content: space-around;
+  }
