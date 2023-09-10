@@ -16,7 +16,7 @@ const PORT = process.env.PORTSERVER; // Define el puerto en el que deseas que el
 const {getCountriesForAPI} = require('./src/controllers/getCountries')
 require('dotenv').config;
 
-conn.sync({ force: alter }) // Sincroniza FORCE : TRUE la base de datos, forzando la creación de tablas. FALCE
+conn.sync({ alter: true }) // Sincroniza FORCE : TRUE la base de datos, forzando la creación de tablas. FALCE
   .then(() => {
     server.listen(PORT, () => {
      // getCountriesForAPI(); //cargo los paises desde la API a mi BDD
