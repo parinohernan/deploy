@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styles from "./CardsGallery.module.css";
 import Error from "../../views/Error/Error";
 import { setCurrentPage } from "../../redux/action";
+import Loading from "../Loading/Loading";
 
 function CardGallery() {
   const dispatch = useDispatch();
@@ -31,6 +32,8 @@ function CardGallery() {
 
   return (
     <div className={styles.cards}>
+      {currentCards.length == 0 && <Loading />}
+
       {/* Mostrar las tarjetas actuales */}
 
       {currentCards.map((card) => (

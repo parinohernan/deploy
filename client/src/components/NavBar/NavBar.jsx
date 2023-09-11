@@ -3,6 +3,7 @@ import { filterPaisByName, setCurrentPage } from "../../redux/action";
 import style from "./NavBar.module.css";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -10,6 +11,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const handleFilterByName = (e) => {
+    //console.log(e.target.value);
     dispatch(filterPaisByName(e.target.value));
     dispatch(setCurrentPage(1));
   };
@@ -18,7 +20,10 @@ const Navbar = () => {
     <nav>
       <Link className={style.header} to="/home">
         <div className={style.divLogo}>
-          <img src="../../../public/images/Logo.png" alt="" />
+          <img
+            src="../../../public/images/LogoCountries.jpg"
+            alt="LogoHenryCountries"
+          />
         </div>
       </Link>
       <div className={style.divNavBar}>
@@ -28,10 +33,13 @@ const Navbar = () => {
           </Link>
         )}
         {location.pathname === "/home" && (
-          <div className={style.divBusqueda}>
-            <h2>Busqueda :</h2>
-            <input type="text" onChange={handleFilterByName} />
-          </div>
+          // (
+          //   <div className={style.divBusqueda}>
+          //     <h2>Busqueda :</h2>
+          //     <input type="text" onChange={handleFilterByName} />
+          //   </div>
+          // )
+          <SearchBar handleFilterByName={handleFilterByName} />
         )}
         <Link className={style.btn} to="/create">
           <h2>Crear Actividad</h2>

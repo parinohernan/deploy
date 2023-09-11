@@ -1,9 +1,4 @@
-.divBusqueda {
-  display: flex;
-  
-  color: rgb(66, 66, 66);
 
-}
 
 .divNavBar {
     display: flex;
@@ -11,11 +6,12 @@
     align-items: center;
     background-color:yellow;
     height: 60px;
-    margin: -15;  
+    
+    margin-bottom: 50px;  
   }
   
   .divLogo {
-    margin: 0;
+    margin: 10px;
     
    }
 

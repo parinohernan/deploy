@@ -5,20 +5,23 @@ import { Link } from "react-router-dom";
 function LandingPage() {
   return (
     <div className="landing-page">
-      <h1>Countries</h1>
-      <h2>
-        Las mas importantes, interesantes y curiosas actividades en los
-        distintos paises del mundo
-      </h2>
       <img
         src="/images/fondoCountries.jpg"
         alt="Background"
         className="background-image"
       />
-      <Link to="/home" className="enter-button">
-        Ingresar
-      </Link>
-      <h3>Proyecto Individual Soy Henry - Hernan Parino</h3>
+      <div>
+        <h2>¿Quieres vivir la experiencia HENRY COUNTRIES?</h2>
+        <h2>Actividades turisticas, deportivas, eventos artisticos y mas.</h2>
+      </div>
+      <div>
+        <Link to="/home" className="enter-button">
+          Ingresar
+        </Link>
+      </div>
+      <div>
+        <h3>Proyecto Individual - School, Soy Henry - Alumno, Hernan Parino</h3>
+      </div>
     </div>
   );
 }
