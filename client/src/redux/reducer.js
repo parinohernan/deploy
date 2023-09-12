@@ -12,6 +12,7 @@ import { GET_COUNTRIES, FILTER_BY_NAME, FILTER_BY_CONTINENT, FILTER_BY_ACTIVITY,
 const rootReducer = (state = initialState, action) => {
   //console.log("en  REDUCER",action);  
   const allCountries = state.allCountries;
+  const countries = state.countries;
   switch (action.type){
         case SET_CURRENT_PAGE:
               return {
@@ -50,10 +51,11 @@ const rootReducer = (state = initialState, action) => {
 
         case FILTER_BY_CONTINENT:
           //console.log("continen",action);
+          const countriesContinent = [...state.allCountries];
           const filtered = action.payload === "Todos" ?
           allCountries 
           : 
-          allCountries.filter(e => e.continents === action.payload);
+          countriesContinent.filter(e => e.continents === action.payload);
           return{
               ...state,
               countries: filtered
@@ -61,10 +63,11 @@ const rootReducer = (state = initialState, action) => {
            
         case FILTER_BY_ACTIVITY:
         // este filtro es un poco complicado porque las actividades son un array de objetos
+        const countriesActivity = [...state.countries];
         const filteredByAct = action.payload === "Todas" ?
-        allCountries 
+        countries 
         : 
-        allCountries.filter((pais) => {//recorre todos los paises
+        countriesActivity.filter((pais) => {//recorre todos los paises
           
           for (let i = 0; i < pais.Activities.length; i++) {//recorre todas las actividades de cada pais
              const actividad = pais.Activities[i].nombre;

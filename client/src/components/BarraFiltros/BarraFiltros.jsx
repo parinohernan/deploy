@@ -21,24 +21,28 @@ const BarraFiltros = () => {
   ];
 
   const countries = useSelector((state) => state.countries);
+  const allCountries = useSelector((state) => state.allCountries);
   const error = useSelector((state) => state.error);
 
-  const allActivities = ["Todas"];
+  //const allActivities = ["Todas"];
 
-  const obtenerAllActivities = countries.map((country) => {
-    if (country.Activities && country.Activities.length !== 0) {
-      for (let i = 0; i < country.Activities.length; i++) {
-        const element = country.Activities[i];
-        allActivities.push(element.nombre);
+  function allActivities() {
+    const aux = ["Todas"];
+
+    allCountries.map((country) => {
+      if (country.Activities && country.Activities.length !== 0) {
+        for (let i = 0; i < country.Activities.length; i++) {
+          const element = country.Activities[i];
+          aux.push(element.nombre);
+        }
       }
-    }
-  });
+    });
+    return aux;
+  }
 
   // Utilizar un Set para eliminar duplicados
-  const set = new Set(allActivities);
-  const array2 = [...set];
-
-  const actividades = array2;
+  const set = new Set(allActivities());
+  const actividades = [...set];
 
   const [selectedContinente, setSelectedContinente] = useState("Todos");
 
@@ -48,13 +52,20 @@ const BarraFiltros = () => {
 
   const handleContinenteChange = (event) => {
     const value = event.target.value;
+    // if ((value = "todos")) {
+    //   //   allActivities = ["Todas"];
+    console.log("cambie el value de continentes", value, selectedActividad);
+    // }
     setSelectedContinente(value);
     dispatch(filterContinente(value));
+    dispatch(filterActividad(selectedActividad));
   };
 
   const handleActividadChange = (event) => {
     const value = event.target.value;
+    console.log("cambie el value de actividad", value, selectedContinente);
     setSelectedActividad(value);
+    dispatch(filterContinente(selectedContinente));
     dispatch(filterActividad(value));
   };
 
