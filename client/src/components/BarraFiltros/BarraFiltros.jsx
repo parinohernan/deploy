@@ -3,7 +3,7 @@ import style from "./BarraFiltros.module.css";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-  // filterPaisByName,
+  setCurrentPage,
   filterContinente,
   filterActividad,
 } from "../../redux/action";
@@ -59,6 +59,7 @@ const BarraFiltros = () => {
     setSelectedContinente(value);
     dispatch(filterContinente(value));
     dispatch(filterActividad(selectedActividad));
+    dispatch(setCurrentPage(1));
   };
 
   const handleActividadChange = (event) => {
@@ -67,6 +68,7 @@ const BarraFiltros = () => {
     setSelectedActividad(value);
     dispatch(filterContinente(selectedContinente));
     dispatch(filterActividad(value));
+    dispatch(setCurrentPage(1));
   };
 
   if (!error) {

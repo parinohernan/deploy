@@ -33,12 +33,6 @@ const Navbar = () => {
           </Link>
         )}
         {location.pathname === "/home" && (
-          // (
-          //   <div className={style.divBusqueda}>
-          //     <h2>Busqueda :</h2>
-          //     <input type="text" onChange={handleFilterByName} />
-          //   </div>
-          // )
           <SearchBar handleFilterByName={handleFilterByName} />
         )}
         <Link className={style.btn} to="/create">

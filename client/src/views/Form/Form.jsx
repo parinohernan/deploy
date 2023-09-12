@@ -40,6 +40,21 @@ const Form = () => {
     setDatosForm({ ...datosForm, dificultad: level });
   };
 
+  const isFormOk = () => {
+    console.log(formErrors, selectedCountries);
+
+    if (
+      formErrors.nombre === "" &&
+      formErrors.dificultad === "" &&
+      formErrors.duracion === "" &&
+      formErrors.temporada === "" &&
+      selectedCountries.length !== 0
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("valida form ", selectedCountries.length, formErrors);
@@ -66,6 +81,8 @@ const Form = () => {
     }
   };
   useEffect(() => {
+    const errors = validate({ ...datosForm });
+    setFormErrors(errors);
     dispatch(getCountries()); // Lanza la acción para obtener datos
   }, [dispatch]);
 
@@ -90,7 +107,7 @@ const Form = () => {
     const prop = e.target.name;
     const value = e.target.value;
     setDatosForm({ ...datosForm, [prop]: value });
-    const errors = validate({ ...datosForm, [prop]: value });
+    const errors = validate({ ...datosForm, [prop]: value }); //agrego el cambio porque no actualiza rapidamente
     setFormErrors(errors);
   };
   // console.log("error", error)  error para cuando hay problemas en el server y no trae la info;
@@ -172,8 +189,13 @@ const Form = () => {
             <button type="button" onClick={limpiarForm}>
               Limpiar datos
             </button>
-
-            <button type="submit">Enviar</button>
+            {isFormOk() ? (
+              <button type="submit">Crear actividad</button>
+            ) : (
+              <button type="submit" disabled>
+                Crear Actividad
+              </button>
+            )}
           </div>
         </div>
       </form>
