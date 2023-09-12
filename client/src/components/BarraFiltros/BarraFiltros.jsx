@@ -52,10 +52,6 @@ const BarraFiltros = () => {
 
   const handleContinenteChange = (event) => {
     const value = event.target.value;
-    // if ((value = "todos")) {
-    //   //   allActivities = ["Todas"];
-    console.log("cambie el value de continentes", value, selectedActividad);
-    // }
     setSelectedContinente(value);
     dispatch(filterContinente(value));
     dispatch(filterActividad(selectedActividad));
@@ -64,7 +60,6 @@ const BarraFiltros = () => {
 
   const handleActividadChange = (event) => {
     const value = event.target.value;
-    console.log("cambie el value de actividad", value, selectedContinente);
     setSelectedActividad(value);
     dispatch(filterContinente(selectedContinente));
     dispatch(filterActividad(value));

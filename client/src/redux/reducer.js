@@ -7,18 +7,24 @@ const initialState = {
   error: null     //es para mostrar el mensaje error404 en caso que el server
 }
 
-import { GET_COUNTRIES, FILTER_BY_NAME, FILTER_BY_CONTINENT, FILTER_BY_ACTIVITY, GET_COUNTRY_DETAIL, POST_ACTIVITY, ORDER_BY_AREA, ORDER_BY_POPULATION, SET_CURRENT_PAGE, FETCH_ERROR, SET_SELECTED_COUNTRIES } from "./action";
+import { GET_COUNTRIES, FILTER_BY_NAME, FILTER_BY_CONTINENT, FILTER_BY_ACTIVITY, GET_COUNTRY_DETAIL, POST_ACTIVITY, ORDER_BY_AREA, ORDER_BY_POPULATION, SET_CURRENT_PAGE, FETCH_ERROR, SET_SELECTED_COUNTRIES, RESET_COUNTRY_DETAIL } from "./action";
 
 const rootReducer = (state = initialState, action) => {
   //console.log("en  REDUCER",action);  
   const allCountries = state.allCountries;
   const countries = state.countries;
   switch (action.type){
+        case RESET_COUNTRY_DETAIL:
+          return {
+            ...state,
+            detail: {}, // Restablece el valor de detail
+          };
+    
         case SET_CURRENT_PAGE:
-              return {
-                ...state,
-                currentPage: action.payload,
-              };
+          return {
+            ...state,
+            currentPage: action.payload,
+          };
         case SET_SELECTED_COUNTRIES:
           return {
             ...state,

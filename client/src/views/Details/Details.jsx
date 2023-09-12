@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCountryDetail } from "../../redux/action";
+import { getCountryDetail, resetCountryDetail } from "../../redux/action";
 import CountryDetail from "../../components/CountryDetail/CountryDetail";
 import styles from "./Details.module.css";
 import { useParams } from "react-router-dom";
@@ -11,6 +11,10 @@ function Details() {
 
   useEffect(() => {
     dispatch(getCountryDetail(id));
+    // Esta función se ejecutará cuando el componente se desmonte
+    return () => {
+      dispatch(resetCountryDetail());
+    };
   }, [id, dispatch]);
 
   const countryDetail = useSelector((state) => state.detail);

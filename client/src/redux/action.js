@@ -10,8 +10,14 @@ export const ORDER_BY_POPULATION = "ORDER_BY_POPULATION";
 export const ORDER_BY_AREA = "ORDER_BY_AREA";
 export const SET_CURRENT_PAGE ="SET_CURRENT_PAGE";
 export const FETCH_ERROR = "FETCH_ERROR";
-export const SET_SELECTED_COUNTRIES = "SET_SELECTED_COUNTRIES"
+export const SET_SELECTED_COUNTRIES = "SET_SELECTED_COUNTRIES";
+export const RESET_COUNTRY_DETAIL ='RESET_COUNTRY_DETAIL';
 // export const FETCH_SUCCESS= "FETCH_SUCCESS";
+
+export const resetCountryDetail = () => ({
+    type: 'RESET_COUNTRY_DETAIL',
+  });
+  
 
 export const setCurrentPage =(payload)=>{
     //console.log("action");
